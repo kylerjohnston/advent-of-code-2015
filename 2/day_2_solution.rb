@@ -17,8 +17,10 @@ puts '=========='
 puts '+ Part 1 +'
 puts '=========='
 puts "Total wrapping paper: #{total_wrapping_paper}"
+# Solution: 1606483
 puts ''
 puts '=========='
 puts '+ Part 2 +'
 puts '=========='
 puts "Total ribbon: #{total_ribbon}"
+# Solution: 3842356
