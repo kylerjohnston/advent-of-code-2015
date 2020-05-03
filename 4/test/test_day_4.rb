@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 require 'minitest/autorun'
-require_relative '../lib/md5problem.rb'
+require_relative '../lib/md5problem'
 
 class TestDay4 < Minitest::Test
   def test_one
