@@ -59,4 +59,8 @@ class Circuit
     wire.parents.reverse.each(&:run)
     wires[id.to_sym].run
   end
+
+  def reset
+    wires.each_value(&:reset)
+  end
 end

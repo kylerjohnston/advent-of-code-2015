@@ -41,4 +41,8 @@ class Wire
       end
     end
   end
+
+  def reset
+    @signal = nil
+  end
 end

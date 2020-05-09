@@ -18,9 +18,23 @@ File.open('../day_7_input.txt', 'r') do |f|
   end
 end
 
+# Part 1
 solution1 = circuit.signal('a')
+
+# Part 2
+puts '========================='
+puts '+ PART TWO CALCULATIONS +'
+puts '========================='
+circuit.wire('b').function = -> { solution1 }
+circuit.reset
+solution2 = circuit.signal('a')
 
 puts '=========='
 puts '+ Part 1 +'
 puts '=========='
 puts "Signal on wire a: #{solution1}" # 46065
+
+puts '=========='
+puts '+ Part 2 +'
+puts '=========='
+puts "Signal on wire a: #{solution2}" # 14134
