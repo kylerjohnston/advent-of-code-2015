@@ -25,10 +25,20 @@ class ListParser
   end
 
   def size
-    strings.reduce(0) { |sum, n| sum + n.size }
+    reduce_by_method(:size)
   end
 
   def rendered_size
-    strings.reduce(0) { |sum, n| sum + n.rendered_size }
+    reduce_by_method(:rendered_size)
+  end
+
+  def encoded_size
+    reduce_by_method(:encoded_size)
+  end
+
+  private
+
+  def reduce_by_method(method)
+    strings.reduce(0) { |sum, n| sum + n.send(method) }
   end
 end

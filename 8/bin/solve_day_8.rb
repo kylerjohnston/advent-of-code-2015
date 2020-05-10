@@ -9,3 +9,8 @@ puts '=========='
 puts '+ Part 1 +'
 puts '=========='
 puts "Part 1 difference: #{parser.size - parser.rendered_size}"
+
+puts '=========='
+puts '+ Part 2 +'
+puts '=========='
+puts "Part 2 difference: #{parser.encoded_size - parser.size}"

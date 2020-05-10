@@ -31,12 +31,32 @@ class ListString
 
     size - difference
   end
-       
+
   def to_s
     string
   end
 
+  def encode
+    encoded = char_array.dup
+    pointer = 0
+    while pointer < encoded.size
+      c = encoded[pointer]
+      if ['"', '\\'].include?(c)
+        encoded.insert(pointer, '\\')
+        pointer += 2
+      else
+        pointer += 1
+      end
+    end
+
+    encoded.prepend('"').append('"')
+  end
+
   def size
     char_array.size
+  end
+
+  def encoded_size
+    encode.size
   end
 end
